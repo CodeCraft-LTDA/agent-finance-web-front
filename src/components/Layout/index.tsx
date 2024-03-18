@@ -1,14 +1,16 @@
 import Aside from "../Aside";
-import MainHeader from "../Content";
-import Content from "../MainHeader";
+import Content from "../Content";
+import MainHeader from "../MainHeader";
 import { Grid } from "./styles";
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
         <Grid>
             <Aside />
             <MainHeader />
-            <Content />
+            <Content>
+                {children}
+            </Content>
         </Grid>
     );
 }
