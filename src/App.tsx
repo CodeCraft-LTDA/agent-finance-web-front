@@ -2,12 +2,15 @@ import { ThemeProvider } from "styled-components";
 import Layout from "./components/Layout";
 import GlobalStyles from "./styles/GlobalStyles";
 import dark from "./styles/themes/dark";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
     <ThemeProvider theme={dark}>
       <GlobalStyles />
-      <Layout />
+      <Layout>
+        <Dashboard />
+      </Layout>
     </ThemeProvider>
 
   );
