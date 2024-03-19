@@ -1,8 +1,9 @@
-import { Container, Header, LogImg, MenuContainer, MenuItemLink, Title } from "./styles";
+import { Container, Header, LogImg, MenuContainer, Title } from "./styles";
 
 import logoImg from '../../assets/logo.svg';
 
 import { MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const Aside = () => {
     return (
@@ -13,25 +14,25 @@ const Aside = () => {
             </Header>
 
             <MenuContainer>
-                <MenuItemLink href="#">
+                <Link to="/dashboard">
                     <MdDashboard />
                     Dashboard
-                </MenuItemLink>
+                </Link>
 
-                <MenuItemLink href="#">
+                <Link to="/list/entry-balance">
                     <MdArrowUpward />
                     Entradas
-                </MenuItemLink>
+                </Link>
 
-                <MenuItemLink href="#">
+                <Link to="/list/exit-balance">
                     <MdArrowDownward />
                     Saidas
-                </MenuItemLink>
+                </Link>
 
-                <MenuItemLink href="#">
+                <Link to="#">
                     <MdExitToApp />
                     Sair
-                </MenuItemLink>
+                </Link>
             </MenuContainer>
         </Container>
     );
